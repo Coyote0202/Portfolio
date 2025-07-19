@@ -12,7 +12,7 @@ export function AboutSection() {
     {
       icon: Server,
       title: "インフラ・DevOps",
-      description: "Kubernetes、Docker、ArgoCDを使ったモダンなインフラ構築",
+      description: "Kubernetes、Docker、ArgoCD、Terraformなどを使ったモダンなインフラ構築",
     },
     {
       icon: Cloud,
@@ -59,7 +59,7 @@ export function AboutSection() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg">
-                <h4 className="font-semibold text-lg mb-2">E2EEチャットアプリ開発</h4>
+                <h4 className="font-semibold text-lg mb-2">ちょっとセキュアなチャットツール・XeroTalk</h4>
                 <p className="text-sm text-slate-600 dark:text-slate-300">
                   エンドツーエンド暗号化による強力なプライバシー保護と、
                   ローカルSLMを活用した危険会話検知システムを組み合わせた革新的なチャットアプリケーション
