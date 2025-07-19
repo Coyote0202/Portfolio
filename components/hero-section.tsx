@@ -1,24 +1,63 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Github, ExternalLink, Mail } from "lucide-react"
+import Image from "next/image";
+import icon from "../assets/icon.jpeg";
+import { Github, ExternalLink, Mail, Moon, Sun, ArrowUp } from "lucide-react"
 import Link from "next/link"
+import { Switch } from "@/components/ui/switch"
+import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
 
 export function HeroSection() {
+  const { theme, setTheme, resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false)
+  useEffect(() => setMounted(true), [])
+  // スクロール位置を監視してボタン表示を制御
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 200)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative">
+      {/* ダーク/ライト切り替えスイッチ */}
+      <div className="absolute top-6 right-6 z-10 flex items-center gap-2">
+        <Sun className="w-4 h-4 text-yellow-500" />
+        {mounted && (
+          <Switch
+            checked={resolvedTheme === "dark"}
+            onCheckedChange={v => setTheme(v ? "dark" : "light")}
+            aria-label="Toggle dark mode"
+          />
+        )}
+        <Moon className="w-4 h-4 text-blue-900 dark:text-yellow-300" />
+      </div>
+
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <div className="space-y-4">
-          <Badge variant="outline" className="text-sm px-3 py-1">
-            N高等学校 通学プログラミングコース 3年生
-          </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-            Yomi
+          <Image
+            src={icon}
+            alt="アイコン"
+            width={80}
+            height={80}
+            style={{
+              borderRadius: '50%',
+              objectFit: 'cover',
+              display: 'block',
+              margin: '0 auto'
+            }}
+          />
+          <h1 style={{paddingBottom: 8}} className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
+            yomi4486
           </h1>
-          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Full-Stack Developer & Infrastructure Engineer
-          </p>
           <p className="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">
-            セキュリティとプライバシーを重視したモダンなアプリケーション開発に情熱を注ぐ学生エンジニア
+            おもしろそうだと思ったことをいい感じにやっています
           </p>
         </div>
 
@@ -62,10 +101,20 @@ export function HeroSection() {
           </div>
           <div className="p-4">
             <div className="text-2xl font-bold text-green-600">1</div>
-            <div className="text-sm text-slate-500">革新的プロジェクト</div>
+            <div className="text-sm text-slate-500">プロジェクト</div>
           </div>
         </div>
       </div>
+      {/* トップへ戻るFAB */}
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-8 right-8 z-50 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg p-4 transition-all duration-300 flex items-center justify-center"
+          aria-label="トップへ戻る"
+        >
+          <ArrowUp className="w-6 h-6" />
+        </button>
+      )}
     </section>
   )
 }

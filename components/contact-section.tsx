@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Github, Mail } from "lucide-react"
+import { Github, Mail, Twitter } from "lucide-react"
 import Link from "next/link"
 
 export function ContactSection() {
@@ -21,6 +21,12 @@ export function ContactSection() {
               <CardTitle className="text-xl">現在の状況</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Badge variant="default" className="bg-green-500">
+                  所属中
+                </Badge>
+                <span className="text-sm">CyberAgent TechLounge</span>
+              </div>
               <div className="flex items-center space-x-3">
                 <Badge variant="default" className="bg-green-500">
                   在学中
@@ -45,13 +51,13 @@ export function ContactSection() {
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="outline">セキュリティ</Badge>
-                <Badge variant="outline">プライバシー保護</Badge>
                 <Badge variant="outline">機械学習</Badge>
                 <Badge variant="outline">インフラ</Badge>
                 <Badge variant="outline">フルスタック開発</Badge>
                 <Badge variant="outline">モバイル開発</Badge>
                 <Badge variant="outline">DevOps</Badge>
                 <Badge variant="outline">クラウド</Badge>
+                <Badge variant="outline">SRE</Badge>
               </div>
             </CardContent>
           </Card>
@@ -72,9 +78,15 @@ export function ContactSection() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="mailto:contact@example.com">
+                <Link href="mailto:dovahkiin4486@icloud.com">
                   <Mail className="mr-2 h-5 w-5" />
                   メール
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="https://x.com/yomi4486" target="_blank" rel="noopener noreferrer">
+                  <Twitter className="mr-2 h-5 w-5" />
+                  Twitter
                 </Link>
               </Button>
             </div>

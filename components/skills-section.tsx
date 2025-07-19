@@ -2,6 +2,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { Server, Code, Smartphone, Database, Shield, GitBranch, Palette } from "lucide-react"
+import {
+  SiTypescript, SiReact, SiFlutter, SiKubernetes, SiDocker, SiHtml5, SiCss3, SiJavascript, SiNodedotjs,
+  SiQemu, SiVite, SiDart, SiFirebase, SiSupabase, SiPython, SiFastapi, SiFlask,
+  SiPytorch, SiTensorflow, SiRust, SiC, SiGo, SiKeras, SiMqtt, SiJest, SiMysql, SiPostgresql,
+  SiCloudflare, SiVercel, SiAmazon, SiGooglecloud, SiExpo, SiGit
+} from "react-icons/si"
+import { FaCogs, FaTools } from "react-icons/fa"
 
 export function SkillsSection() {
   const skillCategories = [
@@ -10,10 +17,10 @@ export function SkillsSection() {
       icon: Server,
       color: "from-green-500 to-emerald-500",
       skills: [
-        { name: "Kubernetes", level: 85 },
-        { name: "Docker", level: 90 },
-        { name: "ArgoCD", level: 80 },
-        { name: "AWS", level: 75 },
+        { name: "Kubernetes", level: 40 },
+        { name: "Docker", level: 60 },
+        { name: "ArgoCD", level: 20 },
+        { name: "AWS", level: 50 },
       ],
     },
     {
@@ -21,10 +28,10 @@ export function SkillsSection() {
       icon: Code,
       color: "from-blue-500 to-cyan-500",
       skills: [
-        { name: "React", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "HTML/CSS", level: 95 },
-        { name: "JavaScript", level: 90 },
+        { name: "React", level: 60 },
+        { name: "TypeScript", level: 55 },
+        { name: "HTML/CSS", level: 70 },
+        { name: "JavaScript", level: 65 },
       ],
     },
     {
@@ -32,9 +39,10 @@ export function SkillsSection() {
       icon: Smartphone,
       color: "from-purple-500 to-pink-500",
       skills: [
-        { name: "React Native", level: 85 },
-        { name: "Expo", level: 80 },
-        { name: "Flutter", level: 75 },
+        { name: "React Native", level: 65 },
+        { name: "Expo", level: 60 },
+        { name: "Flutter", level: 80 },
+        { name: "Swift", level: 30 },
       ],
     },
     {
@@ -44,9 +52,9 @@ export function SkillsSection() {
       skills: [
         { name: "Python", level: 95 },
         { name: "Node.js", level: 85 },
-        { name: "Go", level: 70 },
-        { name: "Java", level: 65 },
-        { name: "Rust", level: 60 },
+        { name: "Go", level: 30 },
+        { name: "Java", level: 10 },
+        { name: "Rust", level: 10 },
       ],
     },
     {
@@ -54,8 +62,10 @@ export function SkillsSection() {
       icon: Database,
       color: "from-indigo-500 to-purple-500",
       skills: [
-        { name: "PostgreSQL", level: 85 },
-        { name: "Firebase", level: 80 },
+        { name: "PostgreSQL", level: 80 },
+        { name: "Firebase", level: 90 },
+        { name: "AWS DynamoDB", level: 50 },
+        { name: "MySQL", level: 40 },
       ],
     },
     {
@@ -84,8 +94,57 @@ export function SkillsSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Technical Skills</h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            幅広い技術領域での実践的なスキルと継続的な学習
+            浅く広くやっているつもりです
           </p>
+        </div>
+
+        {/* 技術スタック一覧（アイコン＋技術名） */}
+        <div className="flex flex-wrap gap-4 justify-center mb-12">
+          {[
+            { name: "TypeScript", icon: SiTypescript },
+            { name: "React", icon: SiReact },
+            { name: "Flutter", icon: SiFlutter },
+            { name: "Kubernetes", icon: SiKubernetes },
+            { name: "Docker", icon: SiDocker },
+            { name: "HTML", icon: SiHtml5 },
+            { name: "CSS", icon: SiCss3 },
+            { name: "JavaScript", icon: SiJavascript },
+            { name: "Node.js", icon: SiNodedotjs },
+            { name: "QEMU", icon: SiQemu },
+            { name: "Vite", icon: SiVite },
+            // ArgoCD: react-iconsに公式アイコンがないため代替
+            { name: "ArgoCD", icon: FaCogs },
+            { name: "Dart", icon: SiDart },
+            { name: "Firebase", icon: SiFirebase },
+            { name: "Supabase", icon: SiSupabase },
+            // Makefile: react-iconsに公式アイコンがないため代替
+            { name: "Makefile", icon: FaTools },
+            { name: "Python", icon: SiPython },
+            { name: "FastAPI", icon: SiFastapi },
+            { name: "Flask", icon: SiFlask },
+            { name: "PyTorch", icon: SiPytorch },
+            { name: "TensorFlow", icon: SiTensorflow },
+            { name: "Rust", icon: SiRust },
+            { name: "C", icon: SiC },
+            { name: "Go", icon: SiGo },
+            { name: "Keras", icon: SiKeras },
+            { name: "MQTT", icon: SiMqtt },
+            { name: "Jest", icon: SiJest },
+            { name: "MySQL", icon: SiMysql },
+            { name: "PostgreSQL", icon: SiPostgresql },
+            { name: "Cloudflare", icon: SiCloudflare },
+            { name: "Vercel", icon: SiVercel },
+            // AWS: SiAmazonを代用
+            { name: "AWS", icon: SiAmazon },
+            { name: "GCP", icon: SiGooglecloud },
+            { name: "Expo", icon: SiExpo },
+            { name: "Git", icon: SiGit },
+          ].map((tech, idx) => (
+            <div key={idx} className="flex items-center px-3 py-2 bg-white dark:bg-slate-800 rounded shadow border gap-2">
+              <tech.icon className="w-6 h-6 text-blue-500" />
+              <span className="text-sm font-medium">{tech.name}</span>
+            </div>
+          ))}
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
