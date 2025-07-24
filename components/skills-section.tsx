@@ -6,9 +6,9 @@ import {
   SiTypescript, SiReact, SiFlutter, SiKubernetes, SiDocker, SiHtml5, SiCss3, SiJavascript, SiNodedotjs,
   SiQemu, SiVite, SiDart, SiFirebase, SiSupabase, SiPython, SiFastapi, SiFlask,
   SiPytorch, SiTensorflow, SiRust, SiC, SiGo, SiKeras, SiMqtt, SiJest, SiMysql, SiPostgresql,
-  SiCloudflare, SiVercel, SiAmazon, SiGooglecloud, SiExpo, SiGit
+  SiCloudflare, SiVercel, SiAmazon, SiGooglecloud, SiExpo, SiGit, SiNextdotjs
 } from "react-icons/si"
-import { FaCogs, FaTools } from "react-icons/fa"
+import { FaCogs, FaTools,FaVuejs } from "react-icons/fa"
 
 export function SkillsSection() {
   const skillCategories = [
@@ -103,6 +103,8 @@ export function SkillsSection() {
           {[
             { name: "TypeScript", icon: SiTypescript },
             { name: "React", icon: SiReact },
+            { name: "Vue", icon: FaVuejs },
+            { name: "Next.js", icon: SiNextdotjs },
             { name: "Flutter", icon: SiFlutter },
             { name: "Kubernetes", icon: SiKubernetes },
             { name: "Docker", icon: SiDocker },
