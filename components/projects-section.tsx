@@ -145,7 +145,7 @@ export function ProjectsSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Projects</h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            技術的な挑戦と社会課題解決を目指したプロジェクト
+            色々やっています
           </p>
         </div>
 
