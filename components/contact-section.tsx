@@ -11,7 +11,7 @@ export function ContactSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            技術的な議論、コラボレーション、採用に関するお問い合わせはお気軽にどうぞ
+            お問い合わせはお気軽にどうぞ
           </p>
         </div>
 
@@ -90,10 +90,6 @@ export function ContactSection() {
                 </Link>
               </Button>
             </div>
-            <p className="text-sm text-slate-600 dark:text-slate-300 mt-6">
-              技術的な質問、プロジェクトのコラボレーション、インターンシップの機会など、
-              どんなことでもお気軽にお声がけください。
-            </p>
           </CardContent>
         </Card>
 

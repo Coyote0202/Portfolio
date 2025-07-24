@@ -32,7 +32,7 @@ export function AboutSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            技術への情熱と社会課題解決への強い意志を持つ学生エンジニア
+            面白そうだと思ったことをやっています
           </p>
         </div>
 
@@ -43,12 +43,14 @@ export function AboutSection() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-slate-600 dark:text-slate-300">
-                N高等学校通学プログラミングコース3年生として、幅広い技術領域で実践的な開発経験を積んでいます。
-                特にセキュリティとプライバシー保護の分野に強い関心を持ち、革新的なソリューションの開発に取り組んでいます。
+                セキュリティやインフラ、SREなどに興味を持っています。高校3年生です。
               </p>
               <p className="text-slate-600 dark:text-slate-300">
-                チーム開発経験も豊富で、Gitを使った協調開発やモダンな開発手法に精通しています。
+                Gitを使った協調開発やモダンな開発手法も学んでいます。
                 また、過去にはOS開発にも挑戦するなど、低レベルから高レベルまで幅広い技術に興味を持っています。
+              </p>
+              <p className="text-slate-600 dark:text-slate-300">
+                ロードバイクやカメラが趣味。ヒトリエが好きです。最近ギターに興味を持ち始めました。
               </p>
             </CardContent>
           </Card>
@@ -62,7 +64,7 @@ export function AboutSection() {
                 <h4 className="font-semibold text-lg mb-2">ちょっとセキュアなチャットツール・XeroTalk</h4>
                 <p className="text-sm text-slate-600 dark:text-slate-300">
                   エンドツーエンド暗号化による強力なプライバシー保護と、
-                  ローカルSLMを活用した危険会話検知システムを組み合わせた革新的なチャットアプリケーション
+                  ローカルSLMを活用した危険会話検知システムを組み合わせた「ちょっとセキュアなチャットツール」
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
