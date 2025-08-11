@@ -1,12 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import { Server, Code, Smartphone, Database, Shield, GitBranch, Palette } from "lucide-react"
+import { Server, Code, Smartphone, Database, Shield, GitBranch, Palette, Shell, File } from "lucide-react"
 import {
   SiTypescript, SiReact, SiFlutter, SiKubernetes, SiDocker, SiHtml5, SiCss3, SiJavascript, SiNodedotjs,
   SiQemu, SiVite, SiDart, SiFirebase, SiSupabase, SiPython, SiFastapi, SiFlask,
   SiPytorch, SiTensorflow, SiRust, SiC, SiGo, SiKeras, SiMqtt, SiJest, SiMysql, SiPostgresql,
-  SiCloudflare, SiVercel, SiAmazon, SiGooglecloud, SiExpo, SiGit, SiNextdotjs
+  SiCloudflare, SiVercel, SiAmazon, SiGooglecloud, SiExpo, SiGit, SiNextdotjs,
+  SiZsh
 } from "react-icons/si"
 import { FaCogs, FaTools,FaVuejs } from "react-icons/fa"
 
@@ -83,9 +84,13 @@ export function SkillsSection() {
 
   const tools = [
     { name: "Figma", icon: Palette },
-    { name: "Notion", icon: GitBranch },
+    { name: "Notion", icon: File },
     { name: "Git", icon: GitBranch },
     { name: "Markdown", icon: Code },
+    { name: "Bash", icon: Shell },
+    { name: "Zsh", icon: SiZsh },
+    { name: "VSCode", icon: Code },
+    { name: "Mermaid", icon: Code }
   ]
 
   return (
